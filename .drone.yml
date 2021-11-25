@@ -3,6 +3,7 @@ name: default
 
 steps:
   - name: service
+    image: ubuntu:latest
     commands:
     - npm install
     - npm run start
