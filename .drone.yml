@@ -1,0 +1,8 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: service
+    commands:
+    - npm install
+    - npm run start
