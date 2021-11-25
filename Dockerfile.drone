@@ -1,0 +1,17 @@
+FROM eddy7697/php8-swoole:1.0.5
+
+# compile source code
+RUN mkdir -p /var/www/html/api
+
+COPY . /var/www/html/api
+
+# setting entrypoint
+WORKDIR /var/www/html/api
+
+# COPY docker/dock_stg/env /var/www/html/api/.env
+
+# RUN composer install --ignore-platform-reqs
+RUN npm install
+
+# RUN ["chmod", "+x", "/root/startphp.sh"]
+CMD ["npm", "start"]

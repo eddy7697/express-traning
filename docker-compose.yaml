@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  appservice:
+    image: express-traning:1.0.0
+    container_name: express-traning
+    build:
+      context: .
+      dockerfile: Dockerfile.drone
+    restart: always
+    ports:
+      - '9080:8000'
+    # environment:
+      # APP_PLATFROM_URL: https://stg.gorakuworld-market.com
